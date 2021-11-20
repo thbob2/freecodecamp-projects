@@ -1,9 +1,9 @@
 // Animate Smooth Scroll
 $('#read-history').on('click', function() {
-    const main = $('#main').position().top;
+    const history = $('#tribute-info').position().top;
     $('html, body').animate(
         {
-            scrollTop: main
+            scrollTop: history
         },900
     );
 });
