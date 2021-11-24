@@ -1,0 +1,26 @@
+.img-logo {
+    filter: invert();
+    width: 3rem;
+    height: auto;
+    max-width:3rem;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.title {
+    font-size: 1rem;
+    flex-wrap: inherit;
+
+}
+#nav-bar{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+}
