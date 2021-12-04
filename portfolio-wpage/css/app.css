@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #ddd;
+    height: auto;
+    font-size: 16px;
+}
+
+.content {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    max-width: 80vw;
+    margin: auto;
+    margin-top: 0;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    border-radius: 25px;
+}
+#header{
+    position: fixed;
+    top: 0%;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    width: 80vw;
+    max-width: 80vw;
+    margin: auto;
+}
+
+#navbar{
+    padding-left: 30%;
+    width: 80vw;
+    max-width:80vw;
+    text-align: center;
+    border: #0e0e0e solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+#avatar {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    justify-items: center;
+    height: 100vh;
+    
+    
+
+}
+.gradiant {
+    background: linear-gradient(-45deg, #ee7752, #ffffff, #23a6d5, #ffffff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#avatar img {
+    margin-top: 5rem ;
+    margin-left: 45%;
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    max-width: 200px;
+    min-width: 100px;
+  
+}
+#avatar p {
+   
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+#title {
+    justify-content: center;
+    text-align: center;
+}
+
+#title,.catch-phrase{
+    text-align: center;
+    color: #ddd;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    margin: 3rem 4rem;
+    text-align: left;
+
+    height: 100vh;
+}
