@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('http://fonts.cdnfonts.com/css/operator-mono');
+ :root {
+    --main-text-color: #1c1c1c;
+    --main-bg-color: #f4f4f4;
+    --accent-color: #4ec5f1;
+    --code-text-color: #E3F2FD;
+    --code-terminal-color: #0c0c0c;
+}
+
+html,
+body {
+    min-width: 300px;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+ #icon {
+    color: var(--accent-color);
+    font-size: 2rem;
+ }
+#navbar {
+    position: fixed;
+    min-width: 250px;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border-right: var(--accent-color) solid 5px;
+}
+
+#navbar ul {
+    height: 70%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#navbar  li {
+    color: var(--main-text-color);
+    border-top: var(--accent-color) 2px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+.nav-link{
+    display: block;
+    padding: 12px 35px;
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight:bold;
+    cursor:zoom-in ;
+	
+}
+
+
+
+header {
+    color: #000;
+    margin: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+    #main-doc header {
+    text-align: left;
+    margin: 0px;
+}
+
+code {
+    display: block;
+    
+    background-color: var(--code-terminal-color);
+    
+    padding: 10px;
+	padding-top: 0;
+	margin: 10px;
+    border-radius: 5px;
+}
+code p {
+    
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    font-family: 'Operator Mono' sans-serif;
+    color: var(--code-text-color);
+    padding: 0;
+    margin: 0;
+}
