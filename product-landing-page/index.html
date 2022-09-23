@@ -28,15 +28,16 @@
 	</head>
 	<body>
 		<header id="header" class="flex">
-			<img
+			
+
+			<nav id="nav-bar">
+				<img
 				src="img/avanstour.png"
 				alt="avan's tour  logo"
 				id="header-img"
 				class="logo"
 			/>
-
-			<nav id="nav-bar">
-				<ul id="nav-menu" class="nav-menu flex">
+				<ul id="nav-menu" class="nav-menu">
 					<li>
 						<a class="nav-link" href="#">Home</a>
 					</li>
@@ -47,10 +48,11 @@
 						<a class="nav-link" href="#how">Pricings </a>
 					</li>
 				</ul>
-			</nav>
-			<span onclick="toggleMenu()">
-				<i id="menu-icon" class="fa-solid fa-bars"></i>
+				<span onclick="toggleMenu()">
+				<i id="menu-icon" class="fa-solid fa-bars "></i>
 			</span>
+			</nav>
+			
 		</header>
 
 		<section id="home" class="cover section">
@@ -215,16 +217,11 @@
 		<!-- JavaScript Bundle with Popper -->
 		<script>
 			var navBar = document.getElementById('nav-menu');
-			navBar.style.maxHeight = '0px';
+			
 			var menuIcon = document.getElementById('menu-icon');
 			function toggleMenu() {
-				if (navBar.style.maxHeight === '0px') {
-					navBar.style.maxHeight = '130px';
-					menuIcon.style.color = '#02c59b';
-				} else {
-					navBar.style.maxHeight = '0px';
-					menuIcon.style.color = '#343a40';
-				}
+				navBar.classList.toggle("active");
+				menuIcon.classList.toggle("active");
 			}
 		</script>
 	</body>
