@@ -6,62 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
     <script src="https://kit.fontawesome.com/f410823c64.js" crossorigin="anonymous"></script>
-    <title>Five Steps of create react app</title>
+    <title>Five Ways to center a Div/title</title>
 </head>
 <body>
-    <nav id="navbar">
-        <header>Five Steps Doc <span id="icon"><i class="fa-brands fa-react fa-spin"></span></i> </header>
-        <ul>
+  <div class="nav-container">
+
+      <nav id="navbar">
+          <div id="menu"> <i class="fa fa-bars"></i></div>
+          <header><h1>
+              Five Ways To center a Div
+              <span id="icon"><i class="fa-brands fa-css3 fa-fade"></span></i> 
+            </h1>
+        </header>
+        <ul class="nav-menu">
             <li>
                 <a href="#Init" class="nav-link"> <i class="fa-solid fa-terminal"></i>  Init Project</a>
             </li>
             <li>
-                <a href="#Dependencies" class="nav-link"> <i class="fa-solid fa-cubes"></i> Dependencies</a>
+                <a href="#flexbox" class="nav-link"> <i class="fa-solid fa-cubes"></i> FlexBox</a>
             </li>
             <li>
-                <a href="#Configuration" class="nav-link"> <i class="fa-solid fa-gears"></i> Configuration</a>
+                <a href="#position" class="nav-link"> <i class="fa-solid fa-gears"></i> Postion</a>
             </li>
             <li>
-                <a href="#More" class="nav-link"> <i class="fa-solid fa-mug-saucer"></i> There is more !!</a>
+                <a href="#grid" class="nav-link"> <i class="fa-solid fa-mug-saucer"></i> Grid</a>
             </li>
             <li>
-                <a href="#Launch" class="nav-link"><i class="fa-solid fa-circle-dot"></i> Launch your application</a>
+                <a href="#tabel" class="nav-link"><i class="fa-solid fa-circle-dot"></i> Table</a>
             </li>
+            <li><a href="" class="nav-link">
+                <i class="fa-solid fa-code-compare"></i> Margin auto</li>
+            </a>
         </ul>
     </nav>
+</div>  
 
     <main id="main-doc">
         <section class="main-section" id="Init">
-            <header>Init your Project 🚀</header>
+            <header>5 ways to center a div using CSS.🚀</header>
             <article>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi similique commodi illum, beatae tenetur consectetur perspiciatis optio iste doloribus, libero nihil nam tempora ea dolorem, aperiam reprehenderit. Dolorum, ut! Voluptates provident facere tenetur tempora eum.
-                    Iste nulla possimus qui voluptates molestiae blanditiis provident commodi odit?
+                <p>Honestly, we all struggle with CSS and try to find our peace with it. We’ve all found ourselves frustrated with centering things in CSS. Allow me to quickly tell you 5 ways by which you can center a div vertically and horizontally --
                     </p>
-
+                <h3>Problem Statment</h3>
+                <p>We have 2 divs parent and child and we need to center child with respect to the parent.</p>
                     <code>
-                        <p> 
-                            $ mkdir my-awesome-app && cd my-awesome-app 
-                            $ yarn init -y
-                            $ yarn add babel-loader @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/runtime @babel/plugin-transform-runtime --dev
-                            $ yarn add webpack webpack-dev-server webpack-cli
-                        </p>
+                              &lt;div class="parent"&gt;
+                                    &lt;div class="child"&gt;&lt;/div&gt;
+                                  &lt;/div&gt;
+            
+                    
                     </code>
                     
             </article>
         </section>
-        <section class="main-section" id="Dependencies">
+        <section class="main-section" id="flexbox">
             <header></header>
             <article></article>
         </section>
-        <section class="main-section" id="Configuration">
+        <section class="main-section" id="position">
             <header></header>
             <article></article>
         </section>
-        <section class="main-section" id="More">
+        <section class="main-section" id="grid">
             <header></header>
             <article></article>
         </section>
-        <section class="main-section" id="Launch">
+        <section class="main-section" id="margin">
             <header></header>
             <article></article>
         </section>
