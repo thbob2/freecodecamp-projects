@@ -9,72 +9,130 @@
     <title>Five Ways to center a Div/title</title>
 </head>
 <body>
-  <div class="nav-container">
 
-      <nav id="navbar">
-          <div id="menu"> <i class="fa fa-bars"></i></div>
-          <header><h1>
-              Five Ways To center a Div
-              <span id="icon"><i class="fa-brands fa-css3 fa-fade"></span></i> 
-            </h1>
-        </header>
-        <ul class="nav-menu">
-            <li>
-                <a href="#Init" class="nav-link"> <i class="fa-solid fa-terminal"></i>  Init Project</a>
-            </li>
-            <li>
-                <a href="#flexbox" class="nav-link"> <i class="fa-solid fa-cubes"></i> FlexBox</a>
-            </li>
-            <li>
-                <a href="#position" class="nav-link"> <i class="fa-solid fa-gears"></i> Postion</a>
-            </li>
-            <li>
-                <a href="#grid" class="nav-link"> <i class="fa-solid fa-mug-saucer"></i> Grid</a>
-            </li>
-            <li>
-                <a href="#tabel" class="nav-link"><i class="fa-solid fa-circle-dot"></i> Table</a>
-            </li>
-            <li><a href="" class="nav-link">
-                <i class="fa-solid fa-code-compare"></i> Margin auto</li>
-            </a>
-        </ul>
-    </nav>
-</div>  
+
+     <div class="nav-container">
+        <nav id="navbar">
+            <header><h1>
+                Five Ways To center a Div
+                <span id="icon"><i class="fa-brands fa-css3 fa-fade"></span></i> 
+              </h1>
+              <span class="button"></span>
+          </header>
+          <ul class="nav-menu">
+              <li>
+                  <a href="#Init" class="nav-link"> <i class="fa-solid fa-terminal"></i>  Init Project</a>
+              </li>
+              <li>
+                  <a href="#flexbox" class="nav-link"> <i class="fa-solid fa-cubes"></i> FlexBox</a>
+              </li>
+              <li>
+                  <a href="#position" class="nav-link"> <i class="fa-solid fa-gears"></i> Postion</a>
+              </li>
+              <li>
+                  <a href="#grid" class="nav-link"> <i class="fa-solid fa-mug-saucer"></i> Grid</a>
+              </li>
+              <li>
+                  <a href="#tabel" class="nav-link"><i class="fa-solid fa-circle-dot"></i> Table</a>
+              </li>
+              <li><a href="" class="nav-link">
+                  <i class="fa-solid fa-code-compare"></i> Margin auto</li>
+              </a>
+          </ul>
+      </nav>
+     </div>
+
 
     <main id="main-doc">
-        <section class="main-section" id="Init">
-            <header>5 ways to center a div using CSS.🚀</header>
+        <section class="main-section" id="init">
+            <header><h1>5 ways to center a div using CSS.🚀 </h1></header>
             <article>
                 <p>Honestly, we all struggle with CSS and try to find our peace with it. We’ve all found ourselves frustrated with centering things in CSS. Allow me to quickly tell you 5 ways by which you can center a div vertically and horizontally --
                     </p>
                 <h3>Problem Statment</h3>
                 <p>We have 2 divs parent and child and we need to center child with respect to the parent.</p>
-                    <code>
-                              &lt;div class="parent"&gt;
-                                    &lt;div class="child"&gt;&lt;/div&gt;
-                                  &lt;/div&gt;
-            
-                    
-                    </code>
+                <code>
+                    &lt;div class="parent"&gt;
+                    &lt;div class="child"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
                     
             </article>
         </section>
         <section class="main-section" id="flexbox">
-            <header></header>
+            <header><h2></h2></header>
             <article></article>
         </section>
         <section class="main-section" id="position">
-            <header></header>
+            <header><h2></h2></header>
             <article></article>
         </section>
         <section class="main-section" id="grid">
-            <header></header>
+            <header><h2></h2></header>
             <article></article>
         </section>
         <section class="main-section" id="margin">
-            <header></header>
+            <header><h2></h2></header>
             <article></article>
         </section>
     </main>
+
+    <script>
+        var body = document.querySelector("body");
+
+var button = document.querySelector("header .button");
+var popupMenu = document.querySelector("#navbar ul");
+
+var indexItems = document.querySelectorAll("#navbar ul a");
+
+
+button.addEventListener("click", () => {
+  toggleMenu();
+});
+
+function toggleMenu() {
+  if (popupMenu.classList.contains("visible")) {
+    hideMenu();
+  } else {
+    showMenu();
+  }
+}
+
+function hideMenu() {
+  button.classList.remove("activated");
+  popupMenu.classList.remove("visible");
+  body.classList.remove("fixed");
+}
+
+function showMenu() {
+  button.classList.add("activated");
+  popupMenu.classList.add("visible");
+  body.classList.add("fixed");
+}
+
+// reset status on start
+hideMenu();
+
+//reset status on resize
+window.addEventListener("resize", () => {
+  hideMenu();
+});
+
+// hide menu on index item (link) click
+// and fix scroll position because of sticky bar
+for( var i = 0; i < indexItems.length; i++) {
+  indexItems[i].addEventListener("click", (e) => {
+    hideMenu();
+    e.preventDefault();
+    var section = document.querySelector(e.target.attributes["href"].value);
+    var posSection = section.getBoundingClientRect().top + window.scrollY;
+    if (window.innerWidth <= 780) {
+      window.scrollTo(0, posSection - 48);
+    } else {
+      window.scrollTo(0, posSection);
+    }
+  });
+}
+    </script>
 </body>
 </html>
