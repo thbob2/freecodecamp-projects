@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap');
 
 :root {
@@ -8,6 +8,7 @@
 	--code-text-color: #f7f7f7;
 	--nav-bg-color: hsl(204, 6%, 15%);
 	--nav-text-color: rgb(243, 233, 211);
+	scroll-behavior: smooth;
 }
 html {
 	font-family: 'Montserrat', Arial, sans-serif;
@@ -29,6 +30,7 @@ h1 {
 }
 h2 {
 	font-size: 1.3rem;
+	font-weight: bold;
 }
 #navbar {
 	float: left;
@@ -41,22 +43,6 @@ h2 {
 	float: right;
 	width: 75%;
 	box-sizing: border-box;
-}
-
-#main-doc code {
-	font-family: 'Roboto mono' monospace sans-serif;
-	display: block;
-	text-align: left;
-	white-space: pre-line;
-	position: relative;
-	word-break: break-all;
-	word-wrap: break-word;
-	line-height: 1.5;
-	background-color: #f7f7f7;
-	padding: 0.5rem;
-	margin: 0.5rem;
-	border-radius: 5px;
-	z-index: -5;
 }
 
 #navbar {
@@ -108,15 +94,111 @@ h2 {
 }
 
 .main-section {
-	margin: 0 auto;
-	padding: 0 0.9rem;
-	max-width: 760px;
+	margin: 0 40px;
+	padding: 10px 0.9rem;
+	max-width: 70%;
 }
 #navbar .button {
 	display: none;
 }
 
-@media only screen and (max-width: 815px) {
+#main-doc article {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-evenly;
+}
+
+#main-doc code {
+	font-family: 'Roboto mono' monospace sans-serif;
+	display: block;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+
+	margin: 0.5rem 0 0.5rem 0.5rem;
+	text-align: left;
+	width: 100%;
+	white-space: pre-line;
+	position: relative;
+	word-break: break-all;
+	word-wrap: break-word;
+	line-height: 1.5;
+	background-color: #f7f7f7;
+	border-radius: 5px;
+	z-index: -5;
+}
+.img {
+	padding: 0.5rem;
+	margin: 0.5rem auto;
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+#main-doc article h4 {
+	text-transform: none;
+	margin: 0 auto;
+	color: gray;
+}
+
+.reference {
+	margin: 1rem;
+	padding: 1rem;
+}
+.reference a {
+	margin: 0 auto;
+	text-transform: capitalize;
+	font-weight: 700;
+	color: var(--accent-color);
+}
+.reference a:hover {
+	color: #1c1c1c;
+	transition: 0.2s ease-in;
+}
+
+footer {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--nav-bg-color);
+	width: 100%;
+}
+footer .socials {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+footer .socials i {
+	font-size: 2rem;
+	color: var(--code-text-color);
+	margin: 0.75rem;
+}
+.fa-twitter:hover {
+	color: hsl(203, 89%, 53%);
+	transition: 0.3s ease-out;
+}
+.fa-linkedin:hover {
+	color: hsl(201, 100%, 35%);
+	transition: 0.3s ease-out;
+}
+
+.fa-github:hover {
+	color: #ffb900;
+	transition: 0.3s ease-in;
+}
+.fa-codepen:hover {
+	color: #1db954;
+	transition: 0.3s ease-in;
+}
+
+footer h3 {
+	color: var(--main-bg-color);
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 45em) {
 	body.fixed {
 		overflow: hidden;
 	}
@@ -183,7 +265,7 @@ h2 {
 		left: 0;
 
 		box-sizing: border-box;
-		height: calc(50vh - 48px);
+		height: calc(40vh - 48px);
 		width: 100%;
 		font-weight: 700;
 		background: var(--nav-bg-color);
@@ -215,5 +297,14 @@ h2 {
 		float: none;
 		width: 100%;
 		padding: 50px 10px 0 15px;
+	}
+	#main-doc code {
+		margin: 0 auto;
+		padding: 1rem 0;
+	}
+
+	.img {
+		padding: 1rem 0;
+		margin: 0 auto;
 	}
 }

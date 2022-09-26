@@ -21,62 +21,159 @@
           </header>
           <ul class="nav-menu">
               <li>
-                  <a href="#Init" class="nav-link"> <i class="fa-solid fa-terminal"></i>  Init Project</a>
+                  <a href="#Problem_Statment" class="nav-link"> <i class="fa-solid fa-terminal"></i>Problem Statment</a>
               </li>
               <li>
-                  <a href="#flexbox" class="nav-link"> <i class="fa-solid fa-cubes"></i> FlexBox</a>
+                  <a href="#Using_Flexbox" class="nav-link"> <i class="fa-solid fa-cubes"></i> Using Flexbox</a>
               </li>
               <li>
-                  <a href="#position" class="nav-link"> <i class="fa-solid fa-gears"></i> Postion</a>
+                  <a href="#Using_Position" class="nav-link"> <i class="fa-solid fa-gears"></i>Using Position</a>
               </li>
               <li>
-                  <a href="#grid" class="nav-link"> <i class="fa-solid fa-mug-saucer"></i> Grid</a>
+                  <a href="#Using_CSS_grid" class="nav-link"> <i class="fa-solid fa-mug-saucer"></i> Using CSS grid</a>
               </li>
               <li>
-                  <a href="#tabel" class="nav-link"><i class="fa-solid fa-circle-dot"></i> Table</a>
+                  <a href="#Using_Tables" class="nav-link"><i class="fa-solid fa-circle-dot"></i>Using Tables</a>
               </li>
-              <li><a href="#margin" class="nav-link">
-                  <i class="fa-solid fa-code-compare"></i> Margin auto</li>
-              </a>
+              <li><a href="#Margin_auto_on_a_flex_item" class="nav-link">
+                  <i class="fa-solid fa-code-compare"></i> Margin auto on a flex item
+                </a>
+              </li>
           </ul>
       </nav>
      </div>
 
 
     <main id="main-doc">
-        <section class="main-section" id="init">
-            <header><h1>5 ways to center a div using CSS.🚀 </h1></header>
-            <article>
-                <p>Honestly, we all struggle with CSS and try to find our peace with it. We’ve all found ourselves frustrated with centering things in CSS. Allow me to quickly tell you 5 ways by which you can center a div vertically and horizontally --
-                    </p>
-                <h3>Problem Statment</h3>
-                <p>We have 2 divs parent and child and we need to center child with respect to the parent.</p>
-                <code>
-                    &lt;div class="parent"&gt;
-                    &lt;div class="child"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
+      <ol>
+
+        <section class="main-section" id="Problem_Statment">
+          <header><h1><li>Problem Statment</li></h1></header>
+          <article>
+            <p>Honestly, we all struggle with CSS and try to find our peace with it. We’ve all found ourselves frustrated with centering things in CSS. Allow me to quickly tell you 5 ways by which you can center a div vertically and horizontally --
+            </p>
+            
+            <p>We have 2 divs parent and child and we need to center child with respect to the parent.</p>
+            <code>
+                  &emsp; &lt;div class="parent"&gt;                    
+                  &emsp;  &emsp; &lt;div class="child"&gt;&lt;/div&gt;
+                  &emsp; &lt;/div&gt;
                 </code>
-                    
+                <img class="img" src="img/exampleimg.png" alt="Illustration of how a centered div looks like">
+                <h4>How it should look</h4>
+              </article>
+            </section>
+            <section class="main-section" id="Using_Flexbox">
+              <header><h2> <li>Using Flexbox</li></h2></header>
+              <article>
+                <p>The Flexible Box Layout Model (flexbox) is a layout model designed for one-dimensional content. It excels at taking a bunch of items which have different sizes, and returning the best layout for those items.
+                </p>
+                <p>
+                  This is the ideal layout model for this sidebar pattern. Flexbox not only helps lay the sidebar and content out inline, but where there's not enough space remaining, the sidebar will break onto a new line. Instead of setting rigid dimensions for the browser to follow, with flexbox, you can instead provide flexible boundaries to hint how the content could display.
+                </p>
+                <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+                <p>Applying following properties to .parent will center .child horizontally and vertically.</p>
+                <code>
+                  .parent {
+                    &emsp;&emsp;display: flex;
+                    &emsp;&emsp;justify-content: center;
+                    &emsp;&emsp;align-items: center;
+                  }
+                </code>
+              </article>
+            </section>
+
+        <section class="main-section" id="Using_Position">
+            <header><h2><li>Using Position</li></h2></header>
+            <article>
+              <p>The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p>
+              <code>
+                .parent {
+                  &emsp;&emsp; position: relative; 
+                }
+              </code>
+              <p>
+                To .child div, apply position absolute and center the content using top, left and transform properties:
+              </p>
+              <code>
+                .child {
+                  &emsp;&emsp; position: absolute;
+                  &emsp;&emsp; top: 50%; 
+                  &emsp;&emsp; left: 50%; 
+                  &emsp;&emsp; transform: translate(-50%, -50%);
+                }
+              </code>
+            </article>
+          </section>
+        <section class="main-section" id="Using_CSS_grid">
+          <header><h2><li>Using CSS grid</li></h2></header>
+          <article>
+            <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
+              <hr/>
+              Applying following properties to .parent will center .child horizontally and vertically.</p>
+              <code>
+                .parent {
+                  &emsp; &emsp; display: grid; 
+                  &emsp; &emsp; justify-content: center; /*horizontal*/ 
+                  &emsp; &emsp; align-content: center; /*vertical*/
+                }
+              </code>
+            </article>
+          </section>
+          <section class="main-section" id="Using_Tables">
+            <header>
+              <h2><li>Using Tables</li></h2>
+            </header>
+            <article>
+              <p>There was a time when tables were the only real way to structure HTML, namely the syntax. But using CSS styling, we can make elements, such as &lt;div>  tags behave like &lt; table> and &lt;td> tags.
+                <hr/>
+                Apply following properties to .parent
+              </p>
+              <code>.parent {
+                &emsp; &emsp; display: table-cell; 
+                &emsp; &emsp; text-align: center; /*horizontal*/
+                &emsp; &emsp; vertical-align: middle; /*vertical*/
+              }</code>
+              <p>Apply following property to .child</p>
+              <code>.child {  
+                &emsp;&emsp; display: inline-block;
+              }</code>
             </article>
         </section>
-        <section class="main-section" id="flexbox">
-            <header><h2></h2></header>
-            <article></article>
-        </section>
-        <section class="main-section" id="position">
-            <header><h2></h2></header>
-            <article></article>
-        </section>
-        <section class="main-section" id="grid">
-            <header><h2></h2></header>
-            <article></article>
-        </section>
-        <section class="main-section" id="margin">
-            <header><h2></h2></header>
-            <article></article>
-        </section>
-    </main>
-
+        
+        <section class="main-section" id="Margin_auto_on_a_flex_item">
+          <header>
+            <h2><li>
+              Margin auto on a flex item
+            </li>
+            </h2>
+          </header>
+          <article>
+            <p>Using margin: auto on a flex item will not only horizontally center the element as it did in block layouts, but also center it in the vertical axis:
+              <hr/>
+              Apply following properties on .parent and .child:</p>
+              <code>.parent {
+                &emsp;&emsp;display: flex;
+              }
+              <br/>.child {
+                &emsp;&emsp;margin:auto;
+              }</code>
+            </article>
+          </section>
+        </ol>  
+          <article class="reference">
+            <a href="https://levelup.gitconnected.com/5-ways-to-center-a-div-using-css-fcd790524708" target="_blank">read full article </a>
+          </article>
+        </main>
+    <footer>
+      <div class="socials">
+        <a href="www.linkedin.com/in/chouaib-boubekeur" target="_blank"><i class="fa fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/ChouaibBoe" target="_blank"><i class="fa fa-brands fa-twitter"></i></a>
+        <a href="https://github.com/thbob2" target="_blank"><i class="fa fa-brands fa-github"></i></a>
+        <a href="https://codepen.io/your-work/" target="_blank"><i class="fa fa-brands fa-codepen"></i></a>
+      </div>
+      <h3>&COPY; Chouaib Boubekeur 2022</h3>
+    </footer>
     <script>
         var body = document.querySelector("body");
 
