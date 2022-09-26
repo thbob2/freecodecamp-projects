@@ -112,6 +112,9 @@ h2 {
 	padding: 0 0.9rem;
 	max-width: 760px;
 }
+#navbar .button {
+	display: none;
+}
 
 @media only screen and (max-width: 815px) {
 	body.fixed {
@@ -157,16 +160,21 @@ h2 {
 		font-size: 1.3rem;
 	}
 	#navbar .button {
-		width: 36px;
-		height: 36px;
-		margin-right: 1rem;
-		background: url(https://2alin.github.io/learn/fcc/tech-doc-page/assets/menu.svg)
-			center / cover no-repeat;
+		display: block;
+		position: fixed;
+		right: 0;
+		font-size: 2rem;
+		margin-left: 2.9rem;
 		cursor: pointer;
 	}
+	#navbar .button i:hover {
+		color: #fff;
+		transition: 0.5s ease-out;
+	}
 
-	#navbar .button.activated {
-		background-image: url(https://2alin.github.io/learn/fcc/tech-doc-page/assets/close.svg);
+	#navbar .button.activated i {
+		color: var(--main-bg-color);
+		transition: 0.5s ease-in;
 	}
 
 	#navbar ul {
