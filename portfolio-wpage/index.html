@@ -19,31 +19,49 @@
 	</head>
 	<body>
 		<!--navigation bar-->
-		<nav id="navbar" class="nav">
-			<ul class="nav-list">
+		<nav id="nav-bar" class="nav">
+			<a href="#" class="">
+				<img src="/img/logo.png" alt="" class="logo">
+			</a>
+			<ul class="nav-list" id="nav-list">
 				<li>
-					<a href="#welecom-section">
-						<i class="fa-solid fa-id-badge"> ABOUT </i>
+					<a href="#welcome-section">
+						<i class="fa-solid fa-id-badge"> 
+							
+						</i>
+						ABOUT 
 					</a>
 				</li>
 				<li>
 					<a href="#projects">
-						<i class="fa-solid fa-code-fork"> WORK </i>
+						<i class="fa-solid fa-code-fork"> 
+						</i>
+							WORK 
 					</a>
 				</li>
 				<!--<li><a href="#certifications"></a></li>-->
 				<li>
 					<a href="#contact"
-						><i class="fa-solid fa-qrcode"> CONTACT </i>
+					><i class="fa-solid fa-qrcode"> 
+						
+					</i>
+						CONTACT 
+							
 					</a>
 				</li>
 			</ul>
+
+			<span  onclick="toggleMenu()">
+				<i class="fa-solid fa-bars" id="menu-icon"></i>
+			</span>
 		</nav>
 
-		<section id="welecome-section" class="welecome-section">
+		<section id="welcome-section" class="welcome-section">
 			<h1>
-				Hello World 🌍 <br />
-				I am Chouaib Boubekeur
+				Hello World 🌍 I'm
+				<br />
+				<span class="flame-text"> Chouaib </span>
+				BOUBEKEUR
 			</h1>
 			<p>
 				Software Engineer && Web Developer<br />and those are my tools
@@ -54,7 +72,7 @@
 				<i class="devicon-bash-plain colored"></i>
 				<i class="devicon-vim-plain colored"></i>
 				<i class="devicon-git-plain colored"></i>
-				<!--? <i class="devicon-github-original colored"></i> -->
+			    <i class="devicon-github-original colored"></i>
 				<i class="devicon-vscode-plain colored"></i>
 				<i class="devicon-html5-plain colored"></i>
 				<i class="devicon-css3-plain colored"></i>
@@ -69,10 +87,10 @@
 				<i class="devicon-express-original colored"></i>
 				<i class="devicon-docker-plain colored"></i>
 				<i class="devicon-composer-line colored"></i>
-				<!-- ?
-        !    <i class="devicon-php-plain colored"></i>
-				!    <i class="devicon-laravel-plain colored"></i>
-      -->
+				
+        		<i class="devicon-php-plain colored"></i>
+				<i class="devicon-laravel-plain colored"></i>
+    
 				<i class="devicon-python-plain colored"></i>
 				<i class="devicon-django-plain colored"></i>
 				<i class="devicon-mysql-plain-wordmark colored"></i>
@@ -83,55 +101,169 @@
 			</div>
 		</section>
 
-		<section id="projects" class="projcts">
-			<h2>These are some of my works</h2>
+		<section id="projects" class="projects">
+			<h2>These are some of my works <br>
+				<i class="fa-solid fa-code-branch"></i>
+			</h2>
 			<div class="grid">
 				<a
-					href="https://thbob2.github.io/art-gallery-generator/"
+					href="https://github.com/thbob2/laravel-crud"
 					target="_blank"
 					class="project project-tile"
 				>
-					<img src="" alt="" class="project-img" />
+					<img src="img/4.png" alt="" class="project-img" />
 
-					<p class="project-name"></p>
+					<p class="project-name">Laravel CRUD application</p>
+					<div class="tech-stack">
+						<i class="devicon-php-plain colored"></i>
+						<i class="devicon-laravel-plain colored"></i>
+						<i class="devicon-html5-plain colored"></i>
+						<i class="devicon-css3-plain colored"></i>
+						<i class="devicon-javascript-plain colored"></i>
+						<i class="devicon-mysql-plain colored"></i>
+					</div>
 				</a>
 
-				<a href="" target="_blank" class="project project-tile">
-					<img src="" alt="" class="project-img" />
+				<a
+					href="https://github.com/thbob2/tweet-extractor"
+					target="_blank"
+					class="project project-tile"
+				>
+					<img src="/img/2.png" alt="" class="project-img" />
 
-					<p class="project-name"></p>
+					<p class="project-name">Tweets Extraction Tool</p>
+					<div class="tech-stack">
+						<i class="devicon-python-plain colored"></i>
+						<i style="color:#fffcf2ff;"class="devicon-pandas-original"></i>
+						<i style="color:#fffcf2ff;"class="devicon-numpy-original"></i>
+						<i class="devicon-mongodb-plain colored"></i>
+						<i class="devicon-twitter-original colored"></i>
+					</div>
 				</a>
 
-				<a href="" target="_blank" class="project project-tile">
-					<img src="" alt="" class="project-img" />
+				<a
+					href="https://thbob2.github.io/breath-gallery/"
+					target="_blank"
+					class="project project-tile"
+				>
+					<img src="img/3.png" alt="" class="project-img" />
 
-					<p class="project-name"></p>
+					<p class="project-name">Picture Gallery</p>
+					<div class="tech-stack">
+						<i class="devicon-html5-plain colored"></i>
+						<i class="devicon-css3-plain colored"></i>
+						<i class="devicon-javascript-plain colored"></i>
+					</div>
 				</a>
 
-				<a href="" target="_blank" class="project project-tile">
-					<img src="" alt="" class="project-img" />
+				<a
+					href="https://thbob2.github.io/nait-flix/"
+					target="_blank"
+					class="project project-tile"
+				>
+					<img src="img/1.png" alt="" class="project-img" />
 
-					<p class="project-name"></p>
+					<p class="project-name">NetFlix SignIn page clone</p>
+					<div class="tech-stack">
+						<i class="devicon-html5-plain colored"></i>
+						<i class="devicon-css3-plain colored"></i>
+						<i class="devicon-javascript-plain colored"></i>
+					</div>
+				</a>
+
+				<a
+					href="https://thbob2.github.io/center-div/"
+					target="_blank"
+					class="project project-tile"
+				>
+					<img src="img/5.png" alt="" class="project-img" />
+
+					<p class="project-name">Five Ways To center a Div</p>
+					<div class="tech-stack">
+						<i class="devicon-html5-plain colored"></i>
+						<i class="devicon-css3-plain colored"></i>
+						<i class="devicon-javascript-plain colored"></i>
+					</div>
+				</a>
+				<a
+					href="https://github.com/thbob2/tech-scrapper"
+					target="_blank"
+					class="project project-tile"
+				>
+					<img src="img/6.png" alt="" class="project-img" />
+
+					<p class="project-name"> Tech Web Scrapper</p>
+					<div class="tech-stack">
+
+						<i class="devicon-javascript-plain colored"></i>
+						<i class="devicon-nodejs-plain colored"></i>
+						<i style="color: #fff;" class="devicon-express-original"></i>
+						
+						<i class="devicon-html5-plain colored"></i>
+						<i class="devicon-css3-plain colored"></i>
+					
+					</div>
 				</a>
 			</div>
+
+			<a
+				href="https://github.com/thbob2"
+				class="btn btn-show-all"
+				target="_blank"
+				>Show all<i class="fas fa-chevron-right"></i
+			></a>
 		</section>
 
 		<section class="contact-section" id="contact">
 			<div class="contact-header">
 				<h2>Looking up for my services ?</h2>
-				<p>what's your poison ☕🍵 🍩 🍪</p>
+				<p>☕🍵 🍩 🍪 <br> 
+					🔥up
+				</p>
 			</div>
 			<div class="contact-links">
-				<a href="" target="_blank" class="btn contact-details">
-					<i class="fa-brands fa-linkedin"></i>
+				<a href="https://www.linkedin.com/in/chouaib-boubekeur/" target="_blank" class="btn contact-details">
+					<i class="fa-brands fa-linkedin-in"></i>
+					<img src="/img/qr/linkedin.png" alt="" class="qr" />
 				</a>
-				<a href="" target="_blank" class="btn contact-details">
-					<i class="fa-brands fa-github"></i>
+				<a href="https://github.com/thbob2" target="_blank" class="btn contact-details">
+					<i class="fa-brands fa-square-github"></i>
+					<img src="/img/qr/github.png" alt="" class="qr" />
 				</a>
-				<a href="" target="_blank" class="btn contact-details">
+				<a href="https://wa.me/213794524792?text=Hello%20World%20%20%F0%9F%8C%8D" target="_blank" class="btn contact-details">
 					<i class="fa-brands fa-whatsapp"></i>
+					<img src="/img/qr/whatsapp.png" alt="" class="qr" />
+				</a>
+
+				<a href="https://twitter.com/ChouaibBoe" target="_blank" class="btn contact-details">
+					<i class="fa-brands fa-twitter"></i>
+					<img src="/img/qr/twitter.png" alt="" class="qr" />
 				</a>
 			</div>
 		</section>
+		<footer>
+			<p>
+				&copy; Created by and for
+				<a href="https://github.com/thbob2" target="_blank"></a>
+					<span class="flame-text">
+
+						Chouaib Boubekeur
+						<i class="fa-solid fa-jedi"></i>
+						</span> 
+				</a>
+			</p>
+		</footer>
+
+<!-- JavaScript Bundle with Popper -->
+<script>
+	var navBar = document.getElementById('nav-list');
+	
+	var menuIcon = document.getElementById('menu-icon');
+	function toggleMenu() {
+		navBar.classList.toggle("active");
+		menuIcon.classList.toggle("active");
+	}
+</script>
+
 	</body>
 </html>
